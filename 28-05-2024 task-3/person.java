@@ -1,3 +1,9 @@
+// 1. Create a class named Person with attributes name 
+// and age. Use Scanner to get user input for a name 
+// and age, then create a Person object and greet the 
+// user by name and age. 
+
+
 // import java.util.io;
 import java.util.Scanner;
 public class person {

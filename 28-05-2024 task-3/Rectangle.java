@@ -18,5 +18,7 @@ public class Rectangle {
         breadth = sc.nextFloat();
         area = length*breadth;
         System.out.println("area of Rectangle : " + area);
+
+        sc.close();
     }
 }

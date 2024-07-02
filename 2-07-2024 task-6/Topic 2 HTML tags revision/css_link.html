@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body{
+        background-color: azure;
+    }
+    h1{
+        color:brown;
+        color: blue;
+  font-family: verdana;
+  font-size: 300%;
+    }
+    p{
+        color: aqua;
+        color: red;
+  font-family: courier;
+  font-size: 160%;
+  border: 2px solid powderblue;
+  padding: 30px;
+  argin: 50px;
+    }
+</style>
+<body>
+    
+    <!-- CSS can be added to HTML documents in 3 ways:
+
+    Inline - by using the style attribute inside HTML elements
+    Internal - by using a <style> element in the <head> section
+    External - by using a <link> element to link to an external CSS file -->
+
+
+    <h1 style="color:rgb(53, 53, 89);">Inline CSS</h1>
+
+    <p style="color:rgb(77, 51, 181);">Inline CSS</p>
+
+    <hr>
+    <h1>Internal CSS</h1>
+    <p>Internal CSS</p>
+<hr>
+<h2>External CSS</h2>
+    <p>External CSS</p>
+
+<!-- Use the HTML style attribute for inline styling
+Use the HTML <style> element to define internal CSS
+Use the HTML <link> element to refer to an external CSS file
+Use the HTML <head> element to store <style> and <link> elements
+Use the CSS color property for text colors
+Use the CSS font-family property for text fonts
+Use the CSS font-size property for text sizes
+Use the CSS border property for borders
+Use the CSS padding property for space inside the border
+Use the CSS margin property for space outside the border -->
+<hr>
+<a href="url"><b>link text</b></a><hr>
+
+<!-- The target attribute specifies where to open the linked document.
+
+The target attribute can have one of the following values:
+
+_self - Default. Opens the document in the same window/tab as it was clicked
+_blank - Opens the document in a new window or tab
+_parent - Opens the document in the parent frame
+_top - Opens the document in the full body of the window -->
+
+
+<!-- Use target="_blank" to open the linked document in a new browser window or tab: -->
+<a href="https://github.com/anjalikesherwani" target="_blank">Git profile</a><br>
+<a href="https://github.com/anjalikesherwani" target="_self">Git profile</a><br>
+<a href="https://github.com/anjalikesherwani" target="_parent">Git profile</a><br>
+<a href="https://github.com/anjalikesherwani" target="_top">Git profile</a><hr>
+
+<h2>Absolute URLs</h2>
+<a href="https://www.w3.org/">W3C</a><br>
+<a href="https://www.google.com/">Google</a><br>
+
+<h2>Relative URLs</h2>
+<!-- A local link (a link to a page within the same website) is specified with a 
+    relative URL (without the "https://www" part): -->
+<a href="html_images.asp">HTML Images</a><br>
+<a href="/css/default.asp">CSS Tutorial</a><hr>
+
+
+<h2>Image as a Link</h2>
+<p>The image below is a link. Try to click on it.</p>
+<a href="links.html">
+<img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;"></a><hr>
+
+<h3>Link to an Email Address</h3>
+
+<h5>To create a link that opens in the user's email program (to let them send a new email), use mailto: inside the href attribute:</h5>
+
+<h5><a href="mailto:anjalikesherwani792@gmail.com">Send email</a></h5>
+<hr>
+
+<h3>Buttons as a links</h3>
+<h6>click on button and go to that page.</h6>
+<button onclick="document.location='links.html'">reach to the page links.html</button><hr>
+
+
+<h3>Link Title</h3>
+<h6>The title attribute specifies extra information about
+    an element. The information is most often shown as 
+    a tooltiptext when the mouse moves over the element.</h6>
+<a href="https://github.com/anjalikesherwani" title="go to git profile" target="_blank">git profile</a>
+
+<!-- Summary
+Use the <a> element to define a link
+Use the href attribute to define the link address
+Use the target attribute to define where to open the linked document
+Use the <img> element (inside <a>) to use an image as a link
+Use the mailto: scheme inside the href attribute to create a link that opens the user's email program -->
+</body>
+</html>

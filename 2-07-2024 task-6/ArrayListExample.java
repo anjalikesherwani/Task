@@ -8,13 +8,10 @@ class Person {
         this.name = name;
         this.age = age;
     }
-
     public String toString() {
         return "Person{name='" + name + "', age=" + age + "}";
     }
 }
-
-
 
 public class ArrayListExample {
     public static void main(String[] args) {

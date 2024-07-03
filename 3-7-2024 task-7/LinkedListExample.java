@@ -73,28 +73,64 @@ public class LinkedListExample {
 
     public static void main(String[] args) {
 
-         // Creating and Adding Elements to LinkedList
-         LinkedList<Person> list1 = new LinkedList<>();
-         list1.add(new Person("Anjali", 30));
-         list1.add(new Person("Pushpanjali", 25));
-         list1.add(new Person("Piyush", 35));
- 
-         LinkedList<Person> list2 = new LinkedList<>();
-         list2.add(new Person("Trapti", 40));
-         list2.add(new Person("Manorama", 28));
-         list2.add(new Person("Annapurna", 33));
- 
-         // Displaying LinkedLists
-         System.out.println("--------------------Displaying LinkedLists------------------");
-         System.out.println("List1:");
-         for (Person person : list1) {
-             System.out.println(person);
-         }
- 
-         System.out.println("List2:");
-         for (Person person : list2) {
-             System.out.println(person);
-         }
+          // Creating and Adding Elements to LinkedList
+          LinkedList<Person> list1 = new LinkedList<>();
+          list1.add(new Person("Anjali", 30));
+          list1.add(new Person("Pushpanjali", 25));
+          list1.add(new Person("Piyush", 35));
+  
+          LinkedList<Person> list2 = new LinkedList<>();
+          list2.add(new Person("Trapti", 40));
+          list2.add(new Person("Manorama", 28));
+          list2.add(new Person("Annapurna", 33));
+  
+          // Displaying LinkedLists
+          System.out.println("----------------Displaying LinkedLists-----------------");
+          System.out.println("List1:");
+          for (Person person : list1) {
+              System.out.println(person);
+          }
+  
+          System.out.println("List2:");
+          for (Person person : list2) {
+              System.out.println(person);
+          }
+  
+          // Merging LinkedLists
+          list1.addAll(list2);
+  
+          // Sorting the LinkedList by age
+          list1.sort(Comparator.comparingInt(Person::getAge));
+  
+          // Reversing the LinkedList
+          Collections.reverse(list1);
+  
+          // Iterating through the LinkedList using an Iterator
+          System.out.println("------------Merged, Sorted, and Reversed List-------------------");
+          Iterator<Person> iterator = list1.iterator();
+          while (iterator.hasNext()) {
+              System.out.println(iterator.next());
+          }
+  
+          // Checking for Containment
+          Person searchPerson = new Person("Anjali", 30);
+          boolean contains = list1.stream().anyMatch(p -> p.getName().equals(searchPerson.getName()) && p.getAge() == searchPerson.getAge());
+          System.out.println("List contains Anjali (30): " + contains);
+  
+          // Removing Elements Based on Condition
+          System.out.println("-------------Removing Elements Based on Condition-----------");
+          list1.removeIf(person -> person.getAge() < 30);
+  
+          // Converting to Array
+          Person[] personArray = list1.toArray(new Person[0]);
+          System.out.println("-------------LinkedList as an Array-----------");
+          for (Person person : personArray) {
+              System.out.println(person);
+          }
+  
+        //   Clearing the LinkedList
+          list1.clear();
+          System.out.println("Cleared List1: " + list1);
+        }
 
     }
-}

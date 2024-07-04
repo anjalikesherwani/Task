@@ -1,0 +1,155 @@
+<!-- Create an HTML form that incorporates various HTML5 form validation features and input types. Use
+  the following specifications and ensure you include every element and attribute listed below:
+
+Text Input:
+
+Label it as "Name".
+Use the id attribute to identify the input.
+Set a maximum length of 20 characters and a minimum length of 3 characters.
+Add a placeholder text "Name".
+Use the autofocus attribute to automatically focus on this input field when the page loads.
+File Input:
+
+Label it as "Profile Pic".
+Use the id attribute to identify the input.
+Restrict the accepted file types to .jpg.
+Make this input required.
+Email Input:
+
+Label it as "Email".
+Use the id attribute to identify the input.
+Provide a default value of "test@gmail.com".
+Number Input:
+
+Label it as "Age".
+Use the id attribute to identify the input.
+Set a minimum value of 18 and a maximum value of 100.
+Set a step value of 4.
+Pattern Matching Input:
+
+Label it as "PIN Code".
+Use the id attribute to identify the input.
+Use a regular expression pattern to ensure the input is exactly 6 digits.
+Provide a title "Please Enter 6 Digit Pin Code" for feedback when the pattern doesn't match.
+Read-only Text Input:
+
+Label it as "NSTI NAME".
+Use the id attribute to identify the input.
+Provide a default value of "NSTI Bengaluru".
+Make the input read-only.
+Dropdown Select:
+
+Label it as "State".
+Use the id attribute to identify the select element.
+Include the options "Select", "Odisha", "Karnataka", and "Jharkhand".
+Set "Odisha" as the default selected option.
+Textarea:
+
+Label it as "Feedback".
+Use the id attribute to identify the textarea.
+Set a minimum length of 20 characters and a maximum length of 30 characters.
+Buttons:
+
+Include a submit button with the text "Submit".
+Include a reset button with the text "Reset".
+Create an HTML form that adheres to the above specifications. Ensure that all elements are properly labeled and that the form includes appropriate validation for each input type. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Form Validation</title>
+
+</head>
+<body>
+
+<h2>HTML Form </h2>
+
+<form id="myForm" action="#" method="post">
+
+    <!-- Text Input -->
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Name" required
+               minlength="3" maxlength="20">
+    </div>
+
+    <!-- File Input -->
+    <div class="form-group">
+        <label for="profile-pic">Profile Pic:</label>
+        <input type="file" id="profile-pic" name="profile-pic" accept=".jpg" required>
+    </div>
+
+    <!-- Email Input -->
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="test@gmail.com">
+    </div>
+
+    <!-- Number Input -->
+    <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="18" max="100" step="4">
+    </div>
+
+    <!-- Pattern Matching Input -->
+    <div class="form-group">
+        <label for="pin-code">PIN Code:</label>
+        <input type="text" id="pin-code" name="pin-code" pattern="[0-9]{6}" title="Please Enter 6 Digit Pin Code" required>
+    </div>
+
+    <!-- Read-only Text Input -->
+    <div class="form-group">
+        <label for="nsti-name">NSTI Name:</label>
+        <input type="text" id="nsti-name" name="nsti-name" value="NSTI Bengaluru" readonly>
+    </div>
+
+    <!-- Dropdown Select -->
+    <div class="form-group">
+        <label for="state">State:</label>
+        <select id="state" name="state">
+            <option value="select">Select</option>
+            <option value="odisha" selected>Odisha</option>
+            <option value="karnataka">Karnataka</option>
+            <option value="jharkhand">Jharkhand</option>
+        </select>
+    </div>
+
+    <!-- Textarea -->
+    <div class="form-group">
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback" rows="4" minlength="20" maxlength="30"></textarea>
+    </div>
+
+    <!-- Buttons -->
+    <div class="form-group">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </div>
+
+</form>
+
+<script>
+    // Example JavaScript validation (client-side)
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+        var nameInput = document.getElementById('name');
+        if (nameInput.value.length < 3 || nameInput.value.length > 20) {
+            alert('Name must be between 3 and 20 characters.');
+            event.preventDefault(); // prevent form submission
+            return false;
+        }
+
+        var pinInput = document.getElementById('pin-code');
+        var pinPattern = /^[0-9]{6}$/;
+        if (!pinPattern.test(pinInput.value)) {
+            alert('Please enter a valid 6 digit PIN code.');
+            event.preventDefault(); // prevent form submission
+            return false;
+        }
+
+        // Additional validation can be added similarly for other fields if needed
+    });
+</script>
+
+</body>
+</html>

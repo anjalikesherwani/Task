@@ -84,6 +84,96 @@ structure tags (<!DOCTYPE>, <html>, <head>, <title>, <body>) -->
             <source src="TOM And JERRY (Official Video) Satbir Aujla _ Satti Dhillon _ Divya Puri _ Punjabi Songs _ Geet MP3.mp4" type="video/mp4">
             <track src="subtitles.vtt" kind="subtitles" srclang="en" label="English">
           </video>
+          <hr>
+
+          <!-- table tags 
+          (<table>, <tr>, <th>, <td>, <thead>, <tbody>, <tfoot>) -->
+
+<h2><u>Tables Tags</u></h2>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Location</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Anjali</td>
+            <td>Prayagraj</td>
+        </tr>
+        <tr>
+            <td>Vaishu</td>
+            <td>Allahabad</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>Footer 1</td>
+            <td>Footer 2</td>
+        </tr>
+    </tfoot>
+</table>
+
+<hr>
+
+<!-- orm tags (<form>, <input>, <textarea>, <button>, <select>, <option>, <label>, <fieldset>, <legend>) -->
+<h2><u>Form Tags</u></h2>
+<form >
+    <fieldset>
+        <legend>Form Example</legend>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea><br><br>
+        <label for="color">Favorite Color:</label>
+        <select id="color" name="color">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+        </select><br><br>
+        <button type="button" onclick="showAlert()">submit</button>
+    </fieldset>
+</form>
+
+<hr>
+<!-- semantic tags (<header>, <nav>, <main>, <section>, <article>, <aside>, <footer>, <figure>, <figcaption>)?  
+  Make sure to include examples of inline elements (<span>, <a>, <img>) and 
+  block-level elements (<div>, <p>, <ul>), as well as other useful tags like <meta>, <link>, <script>, and <style> -->
+<section id="semantics">
+    <h2><u>Semantic Elements</u></h2>
+    <article>
+        <header>
+            <h3>Header</h3>
+        </header>
+        <p>This is an article.</p>
+        <aside>
+            <p>This is an aside.</p>
+        </aside>
+        <footer>
+            <p>Footer.</p>
+        </footer>
+    </article>
+</section>
+
+<hr>
+
+<div>
+<h2><u>Navigation Bar</u></h2>
+<nav>
+    <ul>
+        <li><a href="#Home">Home Page</a></li>
+       
+    </ul>
+</nav>
+</div>
+
+
+
+
+    </main>   
+
+<script src="script.js"></script>
 
 </body>
 </html>
